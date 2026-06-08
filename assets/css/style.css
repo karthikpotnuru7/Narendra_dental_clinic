@@ -537,7 +537,7 @@ ul {
    ABOUT SECTION
    ======================================== */
 .about {
-    padding: 120px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
@@ -570,6 +570,10 @@ ul {
     border-radius: var(--radius-lg);
     z-index: -1;
     opacity: 0.3;
+}
+
+.about-image-mobile {
+    display: none;
 }
 
 .experience-badge {
@@ -655,7 +659,7 @@ ul {
    STATS SECTION
    ======================================== */
 .stats {
-    padding: 80px 0;
+    padding: 60px 0;
     background: linear-gradient(135deg, var(--primary), var(--accent));
 }
 
@@ -706,14 +710,14 @@ ul {
    SERVICES SECTION
    ======================================== */
 .services {
-    padding: 120px 0;
+    padding: 80px 0;
     background: var(--off-white);
 }
 
 .section-header {
     text-align: center;
     max-width: 600px;
-    margin: 0 auto 64px;
+    margin: 0 auto 40px;
 }
 
 .section-header h2 {
@@ -823,7 +827,7 @@ ul {
    CTA BANNER
    ======================================== */
 .cta-banner {
-    padding: 100px 0;
+    padding: 70px 0;
     background: linear-gradient(135deg, var(--dark), var(--gray-700));
     text-align: center;
     position: relative;
@@ -873,7 +877,7 @@ ul {
    TESTIMONIALS SECTION
    ======================================== */
 .testimonials {
-    padding: 120px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
@@ -958,7 +962,7 @@ ul {
    CONTACT SECTION
    ======================================== */
 .contact {
-    padding: 120px 0;
+    padding: 80px 0;
     background: var(--off-white);
 }
 
@@ -1197,7 +1201,7 @@ ul {
    ======================================== */
 .back-to-top {
     position: fixed;
-    bottom: 30px;
+    bottom: 96px;
     right: 30px;
     width: 48px;
     height: 48px;
@@ -1284,9 +1288,562 @@ ul {
 }
 
 /* ========================================
+   MEET YOUR DENTIST SECTION
+   ======================================== */
+.dentist {
+    padding: 80px 0;
+    background: var(--white);
+    overflow: hidden;
+}
+
+.dentist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.dentist-image-column {
+    position: relative;
+}
+
+.dentist-image-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.dentist-image-wrapper img {
+    border-radius: var(--radius-lg);
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.5s var(--transition);
+}
+
+.dentist-avatar-placeholder {
+    width: 100%;
+    height: 520px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--gray-50), var(--gray-100));
+    border: 2px dashed var(--gray-200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: var(--shadow-lg);
+    color: var(--gray-400);
+    transition: transform 0.5s var(--transition);
+}
+
+.dentist-avatar-placeholder .avatar-icon {
+    font-size: 3.5rem;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+}
+
+.dentist-avatar-placeholder .avatar-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--gray-500);
+    text-transform: uppercase;
+}
+
+.dentist-image-wrapper:hover img,
+.dentist-image-wrapper:hover .dentist-avatar-placeholder {
+    transform: scale(1.02);
+}
+
+.dentist-image-accent {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 140px;
+    height: 140px;
+    border: 3px solid var(--primary);
+    border-radius: var(--radius-lg);
+    z-index: -1;
+    opacity: 0.35;
+}
+
+/* Floating Badges */
+.dentist-badge {
+    position: absolute;
+    background: var(--white);
+    padding: 16px 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--gray-100);
+    z-index: 3;
+    transition: transform 0.3s var(--transition), box-shadow 0.3s var(--transition);
+}
+
+.dentist-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.badge-experience {
+    top: 40px;
+    left: -40px;
+}
+
+.badge-patients {
+    bottom: 40px;
+    right: -40px;
+}
+
+.badge-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.1;
+}
+
+.badge-txt {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-500);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.dentist-subtitle {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.dentist-qualifications {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.qualification-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(13, 71, 161, 0.08);
+    padding: 6px 16px;
+    border-radius: 50px;
+}
+
+.dentist-bio {
+    font-size: 1rem;
+    color: var(--gray-500);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Achievements Grid */
+.dentist-achievements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--gray-600);
+}
+
+.achievement-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: rgba(76, 175, 80, 0.12); /* Light green tint matching var(--success) */
+    color: var(--success);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.dentist-actions {
+    margin-top: 10px;
+}
+
+/* ========================================
+   SMILE TRANSFORMATIONS GALLERY
+   ======================================== */
+.gallery {
+    padding: 80px 0;
+    background: var(--off-white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.gallery-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-100);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.3s var(--transition), box-shadow 0.3s var(--transition);
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Draggable Comparison Slider */
+.comparison-slider {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #cbd5e1; /* Fallback Before background */
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.comparison-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+/* Image wrappers */
+.image-after-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%; /* Initial split percentage */
+    overflow: hidden;
+    z-index: 3;
+    background: #bfdbfe; /* Fallback After background */
+    border-right: 2px solid var(--white);
+}
+
+.image-after-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Placeholder overlays for empty images */
+.slider-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+}
+
+.placeholder-before {
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    color: #475569;
+}
+
+.placeholder-after {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    color: var(--primary-dark);
+    /* Set width: 100% of the slider container so the text aligns center when resized */
+    width: 100%;
+    height: 100%;
+}
+
+.placeholder-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.placeholder-subtitle {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+/* Slider labels (Before/After) */
+.slider-label {
+    position: absolute;
+    bottom: 16px;
+    background: rgba(15, 23, 36, 0.65);
+    color: var(--white);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 4;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: opacity 0.3s ease;
+}
+
+.label-before {
+    left: 16px;
+}
+
+.label-after {
+    right: 16px;
+}
+
+/* Fade out labels during active dragging */
+.comparison-slider.active .slider-label {
+    opacity: 0;
+}
+
+/* Drag Handle */
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: var(--white);
+    z-index: 5;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.handle-button {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(30, 136, 229, 0.4);
+    border: 3px solid var(--white);
+    transition: background-color 0.2s, transform 0.2s;
+    pointer-events: none;
+}
+
+.slider-handle:hover .handle-button,
+.slider-handle:focus-visible .handle-button {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.slider-handle:focus-visible {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 3px;
+}
+
+/* Card Body */
+.gallery-card .card-body {
+    padding: 24px;
+}
+
+.gallery-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--gray-700);
+    margin-bottom: 8px;
+}
+
+.gallery-card p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+}
+
+/* ========================================
+   FLOATING WHATSAPP BUTTON
+   ======================================== */
+.whatsapp-float-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    animation: whatsappFloat 4s ease-in-out infinite;
+}
+
+/* Continuous pulse effect */
+.whatsapp-float-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #25D366;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    animation: whatsappPulse 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Hide the pulse animation when hover over the button */
+.whatsapp-float-wrapper:hover::before {
+    animation: none;
+    opacity: 0;
+}
+
+.whatsapp-float {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 56px;
+    width: 56px;
+    background-color: #25D366;
+    color: var(--white);
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.whatsapp-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--white);
+    transition: transform 0.4s ease;
+}
+
+.whatsapp-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--white);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding-right: 20px;
+}
+
+/* Keyboard accessibility focus outline */
+.whatsapp-float:focus-visible {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 3px;
+    width: 170px;
+}
+
+.whatsapp-float:focus-visible .whatsapp-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Hover behaviors */
+@media (hover: hover) {
+    .whatsapp-float:hover {
+        width: 170px;
+        background-color: #128C7E; /* Modern WhatsApp teal */
+        box-shadow: 0 8px 25px rgba(18, 140, 126, 0.5);
+    }
+
+    .whatsapp-float:hover .whatsapp-text {
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0.1s;
+    }
+
+    .whatsapp-float:hover svg {
+        transform: rotate(360deg);
+    }
+}
+
+/* Keyframes for Floating and Pulsing */
+@keyframes whatsappFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes whatsappPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    30% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* ========================================
    RESPONSIVE DESIGN
    ======================================== */
 @media (max-width: 1024px) {
+    .nav-links a {
+        padding: 6px 12px;
+        font-size: 0.74rem;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .dentist-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .dentist-image-column {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .dentist-image-wrapper img,
+    .dentist-avatar-placeholder {
+        height: 440px;
+    }
+
     .hero h1 {
         font-size: 2.8rem;
     }
@@ -1302,11 +1859,31 @@ ul {
 
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 30px;
+    }
+
+    .about-grid > .about-image {
+        display: none;
     }
 
     .about-image img {
         height: 400px;
+    }
+
+    .about-image-mobile {
+        display: block;
+        position: relative;
+        width: calc(100% - 20px);
+        max-width: 500px;
+        margin: 30px auto 30px 20px;
+    }
+
+    .about-image-mobile img {
+        border-radius: var(--radius-lg);
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        box-shadow: var(--shadow-lg);
     }
 
     .services-grid {
@@ -1320,6 +1897,88 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .about,
+    .dentist,
+    .services,
+    .gallery,
+    .testimonials,
+    .contact {
+        padding: 50px 0;
+    }
+
+    .stats {
+        padding: 40px 0;
+    }
+
+    .cta-banner {
+        padding: 50px 0;
+    }
+
+    .section-header {
+        margin-bottom: 24px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .placeholder-title {
+        font-size: 1.2rem;
+    }
+
+    .badge-experience {
+        left: -20px;
+        top: 30px;
+    }
+
+    .badge-patients {
+        right: -20px;
+        bottom: 30px;
+    }
+
+    .whatsapp-float-wrapper {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float-wrapper::before {
+        width: 48px;
+        height: 48px;
+    }
+
+    .whatsapp-float {
+        width: 48px;
+        height: 48px;
+    }
+
+    .whatsapp-icon-wrapper {
+        width: 48px;
+        height: 48px;
+    }
+
+    .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    @media (hover: none) {
+        .whatsapp-float:hover {
+            width: 48px;
+            background-color: #25D366;
+        }
+        .whatsapp-float:hover svg {
+            transform: none;
+        }
+    }
+
+    .back-to-top {
+        bottom: 80px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -1400,7 +2059,7 @@ ul {
 
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 24px;
     }
 
     .contact-form-wrap {
@@ -1423,7 +2082,7 @@ ul {
 
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 24px;
     }
 
     .hero-scroll-indicator {
@@ -1432,6 +2091,28 @@ ul {
 }
 
 @media (max-width: 480px) {
+    .dentist-image-wrapper img,
+    .dentist-avatar-placeholder {
+        height: 320px;
+    }
+
+    .dentist-badge {
+        padding: 10px 16px;
+    }
+
+    .badge-num {
+        font-size: 1.4rem;
+    }
+
+    .badge-txt {
+        font-size: 0.65rem;
+    }
+
+    .dentist-achievements {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
     .hero h1 {
         font-size: 1.8rem;
     }
@@ -1441,7 +2122,8 @@ ul {
         align-items: flex-start;
     }
 
-    .about-image img {
+    .about-image img,
+    .about-image-mobile img {
         height: 300px;
     }
 

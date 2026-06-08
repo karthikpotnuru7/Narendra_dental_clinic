@@ -42,8 +42,10 @@
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#dentist">DENTIST</a></li>
                 <li><a href="#about">ABOUT US</a></li>
                 <li><a href="#services">SERVICES</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
                 <li><a href="#testimonials">TESTIMONIALS</a></li>
                 <li><a href="#contact" class="nav-cta">Contact Us <span>&rarr;</span></a></li>
             </ul>
@@ -82,6 +84,72 @@
         <div class="hero-scroll-indicator">
             <div class="scroll-line"></div>
             <span>Scroll</span>
+    </section>
+
+    <!-- Meet Dentist Section -->
+    <section id="dentist" class="dentist">
+        <div class="container">
+            <div class="dentist-grid">
+                <div class="dentist-image-column" data-animate>
+                    <div class="dentist-image-wrapper">
+                        <div class="dentist-avatar-placeholder">
+                            <span class="avatar-icon"></span>
+                            <span class="avatar-text">Doctor Photo</span>
+                        </div>
+                        <div class="dentist-image-accent"></div>
+
+                        <!-- Overlay Badges -->
+                        <div class="dentist-badge badge-experience">
+                            <span class="badge-num">10+</span>
+                            <span class="badge-txt">Years Experience</span>
+                        </div>
+                        <div class="dentist-badge badge-patients">
+                            <span class="badge-num">2000+</span>
+                            <span class="badge-txt">Happy Patients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dentist-content-column" data-animate>
+                    <span class="section-tag">MEET YOUR DENTIST</span>
+                    <h2>Meet <span class="highlight">Dr. Narendra</span></h2>
+                    <h3 class="dentist-subtitle">Dedicated to Creating Healthy and Beautiful Smiles</h3>
+
+                    <div class="dentist-qualifications">
+                        <span class="qualification-tag">BDS</span>
+                        <span class="qualification-tag">MDS (Oral & Maxillofacial Surgery)</span>
+                    </div>
+
+                    <p class="dentist-bio">
+                        Dr. Narendra is committed to providing exceptional dental care using modern techniques and
+                        advanced technology. His patient-focused approach ensures comfortable and effective treatment
+                        for patients of all ages.
+                    </p>
+
+                    <!-- Achievements Grid -->
+                    <div class="dentist-achievements">
+                        <div class="achievement-item">
+                            <span class="achievement-icon">✓</span>
+                            <span>Experienced Dental Surgeon</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-icon">✓</span>
+                            <span>Advanced Dental Equipment</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-icon">✓</span>
+                            <span>Personalized Treatment Plans</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-icon">✓</span>
+                            <span>Gentle and Comfortable Care</span>
+                        </div>
+                    </div>
+
+                    <div class="dentist-actions">
+                        <a href="#contact" class="btn btn-primary">Book an Appointment <span>&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -89,18 +157,14 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image" data-animate>
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
-                        alt="Modern dental clinic interior">
-                    <div class="about-image-accent"></div>
-                    <div class="experience-badge">
-                        <span class="exp-number">10+</span>
-                        <span class="exp-text">Years of<br>Experience</span>
-                    </div>
-                </div>
                 <div class="about-content" data-animate>
                     <span class="section-tag">ABOUT US</span>
                     <h2>Your Trusted Partner in <span class="highlight">Dental Health</span></h2>
+                    <div class="about-image-mobile">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+                            alt="Modern dental clinic interior">
+                        <div class="about-image-accent"></div>
+                    </div>
                     <p class="about-desc">At <strong>Narendra Dental Clinic And Implant Centre</strong>, we are
                         dedicated to providing world-class dental care in a warm and comfortable environment. Our
                         state-of-the-art facility in Bobbili is equipped with the latest technology to deliver
@@ -147,6 +211,11 @@
                         </div>
                     </div>
                     <a href="#services" class="btn btn-secondary">Our Services <span>&rarr;</span></a>
+                </div>
+                <div class="about-image" data-animate>
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+                        alt="Modern dental clinic interior">
+                    <div class="about-image-accent"></div>
                 </div>
             </div>
         </div>
@@ -267,14 +336,189 @@
         </div>
     </section>
 
+    <!-- Smile Transformations Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="section-tag">SMILE GALLERY</span>
+                <h2>Smile <span class="highlight">Transformations</span></h2>
+                <p>Real Results From Our Dental Treatments</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Whitening Card -->
+                <div class="gallery-card" data-animate>
+                    <div class="comparison-slider" data-slider>
+                        <!-- Before Placeholder -->
+                        <div class="slider-placeholder placeholder-before">
+                            <span class="placeholder-subtitle">Before Treatment</span>
+                            <span class="placeholder-title">Teeth Whitening</span>
+                        </div>
+                        <img class="image-before" src="assets/images/gallery/whitening-before.png"
+                            alt="Teeth Whitening Before" onerror="this.style.opacity='0';">
+
+                        <!-- After Wrapper & Placeholder -->
+                        <div class="image-after-wrapper" data-after-wrapper>
+                            <div class="slider-placeholder placeholder-after">
+                                <span class="placeholder-subtitle">After Treatment</span>
+                                <span class="placeholder-title" style="color: var(--white);">Bright White Smile</span>
+                            </div>
+                            <img class="image-after" src="assets/images/gallery/whitening-after.png"
+                                alt="Teeth Whitening After" onerror="this.style.opacity='0';">
+                        </div>
+
+                        <span class="slider-label label-before">Before</span>
+                        <span class="slider-label label-after">After</span>
+
+                        <!-- Drag Handle -->
+                        <div class="slider-handle" data-handle role="slider" aria-valuenow="50" aria-valuemin="0"
+                            aria-valuemax="100" aria-label="Before and after slider handle" tabindex="0">
+                            <div class="handle-button">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <polyline points="8 5 1 12 8 19" />
+                                    <polyline points="16 5 23 12 16 19" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Teeth Whitening</h3>
+                        <p>Professional teeth whitening treatment delivering a brighter and healthier smile.</p>
+                    </div>
+                </div>
+
+                <!-- Dental Implants Card -->
+                <div class="gallery-card" data-animate>
+                    <div class="comparison-slider" data-slider>
+                        <div class="slider-placeholder placeholder-before">
+                            <span class="placeholder-subtitle">Before Treatment</span>
+                            <span class="placeholder-title">Missing Tooth</span>
+                        </div>
+                        <img class="image-before" src="assets/images/gallery/implants-before.png"
+                            alt="Dental Implants Before" onerror="this.style.opacity='0';">
+
+                        <div class="image-after-wrapper" data-after-wrapper>
+                            <div class="slider-placeholder placeholder-after">
+                                <span class="placeholder-subtitle">After Treatment</span>
+                                <span class="placeholder-title" style="color: var(--white);">Complete Implant</span>
+                            </div>
+                            <img class="image-after" src="assets/images/gallery/implants-after.png"
+                                alt="Dental Implants After" onerror="this.style.opacity='0';">
+                        </div>
+
+                        <span class="slider-label label-before">Before</span>
+                        <span class="slider-label label-after">After</span>
+
+                        <div class="slider-handle" data-handle role="slider" aria-valuenow="50" aria-valuemin="0"
+                            aria-valuemax="100" aria-label="Before and after slider handle" tabindex="0">
+                            <div class="handle-button">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <polyline points="8 5 1 12 8 19" />
+                                    <polyline points="16 5 23 12 16 19" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Dental Implants</h3>
+                        <p>Permanent tooth replacement solutions replacing missing teeth with natural-looking
+                            restorations.</p>
+                    </div>
+                </div>
+
+                <!-- Orthodontic Card -->
+                <div class="gallery-card" data-animate>
+                    <div class="comparison-slider" data-slider>
+                        <div class="slider-placeholder placeholder-before">
+                            <span class="placeholder-subtitle">Before Treatment</span>
+                            <span class="placeholder-title">Misaligned Teeth</span>
+                        </div>
+                        <img class="image-before" src="assets/images/gallery/ortho-before.png"
+                            alt="Orthodontic Treatment Before" onerror="this.style.opacity='0';">
+
+                        <div class="image-after-wrapper" data-after-wrapper>
+                            <div class="slider-placeholder placeholder-after">
+                                <span class="placeholder-subtitle">After Treatment</span>
+                                <span class="placeholder-title" style="color: var(--white);">Perfect Alignment</span>
+                            </div>
+                            <img class="image-after" src="assets/images/gallery/ortho-after.png"
+                                alt="Orthodontic Treatment After" onerror="this.style.opacity='0';">
+                        </div>
+
+                        <span class="slider-label label-before">Before</span>
+                        <span class="slider-label label-after">After</span>
+
+                        <div class="slider-handle" data-handle role="slider" aria-valuenow="50" aria-valuemin="0"
+                            aria-valuemax="100" aria-label="Before and after slider handle" tabindex="0">
+                            <div class="handle-button">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <polyline points="8 5 1 12 8 19" />
+                                    <polyline points="16 5 23 12 16 19" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Orthodontic Treatment</h3>
+                        <p>Clear aligners and modern braces correcting bite alignment for a straighter, confident smile.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Smile Makeover Card -->
+                <div class="gallery-card" data-animate>
+                    <div class="comparison-slider" data-slider>
+                        <div class="slider-placeholder placeholder-before">
+                            <span class="placeholder-subtitle">Before Treatment</span>
+                            <span class="placeholder-title">Stained / Chipped</span>
+                        </div>
+                        <img class="image-before" src="assets/images/gallery/makeover-before.png"
+                            alt="Smile Makeover Before" onerror="this.style.opacity='0';">
+
+                        <div class="image-after-wrapper" data-after-wrapper>
+                            <div class="slider-placeholder placeholder-after">
+                                <span class="placeholder-subtitle">After Treatment</span>
+                                <span class="placeholder-title" style="color: var(--white);">Aesthetic Veneers</span>
+                            </div>
+                            <img class="image-after" src="assets/images/gallery/makeover-after.png"
+                                alt="Smile Makeover After" onerror="this.style.opacity='0';">
+                        </div>
+
+                        <span class="slider-label label-before">Before</span>
+                        <span class="slider-label label-after">After</span>
+
+                        <div class="slider-handle" data-handle role="slider" aria-valuenow="50" aria-valuemin="0"
+                            aria-valuemax="100" aria-label="Before and after slider handle" tabindex="0">
+                            <div class="handle-button">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <polyline points="8 5 1 12 8 19" />
+                                    <polyline points="16 5 23 12 16 19" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Smile Makeover</h3>
+                        <p>Custom veneers, crowns, and aesthetic treatments designed to deliver your perfect smile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Banner -->
     <section class="cta-banner">
         <div class="container">
             <div class="cta-content" data-animate>
-                <h2>Ready For Your Best Smile?</h2>
+                <h2>Ready for Your Smile Transformation?</h2>
                 <p>Book your appointment today and take the first step towards a healthier, more confident smile.</p>
                 <div class="cta-actions">
-                    <a href="tel:9030424008" class="btn btn-primary btn-large">
+                    <a href="#contact" class="btn btn-primary btn-large">Schedule a Consultation <span>&rarr;</span></a>
+                    <a href="tel:9030424008" class="btn btn-outline btn-large">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path
@@ -282,7 +526,6 @@
                         </svg>
                         Call 9030424008
                     </a>
-                    <a href="pages/appointment.html" class="btn btn-outline btn-large">Book Online <span>&rarr;</span></a>
                 </div>
             </div>
         </div>
@@ -358,7 +601,8 @@
                             <div>
                                 <h4>Our Location</h4>
                                 <p>Janda Veedhi, Opposite Sai Ganapathi Theatre,<br>Balijipeta Road,
-                                    Maharanipeta,<br>Bobbili, Andhra Pradesh – 535558</p>
+                                    <br>Bobbili, Andhra Pradesh – 535558
+                                </p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -495,6 +739,21 @@
             <polyline points="18 15 12 9 6 15" />
         </svg>
     </button>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float-wrapper">
+        <a href="https://wa.me/919030424008?text=Hello%20Narendra%20Dental%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment."
+            class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+            aria-label="Chat with Narendra Dental Clinic on WhatsApp">
+            <div class="whatsapp-icon-wrapper">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.005 4.908A9.82 9.82 0 0 0 11.992 2C6.534 2 2.085 6.448 2.08 11.91c0 1.748.458 3.45 1.321 4.956L2 22l5.255-1.377a9.816 9.816 0 0 0 4.735 1.206h.005c5.46 0 9.908-4.45 9.913-9.913a9.827 9.827 0 0 0-2.903-6.908h-.005zM11.992 20.15a8.167 8.167 0 0 1-4.177-1.151l-.299-.177-3.109.815.83-3.03-.195-.31a8.162 8.162 0 0 1-1.25-4.385c.004-4.506 3.67-8.17 8.18-8.17a8.166 8.166 0 0 1 5.783 2.397 8.17 8.17 0 0 1 2.393 5.79c-.004 4.51-3.666 8.177-8.166 8.177zm4.48-6.115c-.247-.125-1.459-.72-1.685-.804-.226-.084-.39-.125-.555.125-.165.247-.64.804-.784.969-.144.165-.288.185-.534.06a6.726 6.726 0 0 1-2.726-1.68 7.41 7.41 0 0 1-1.887-2.353c-.144-.247-.015-.38.11-.504.112-.112.247-.29.37-.435.125-.145.166-.248.248-.413.083-.165.042-.31-.02-.435-.063-.125-.555-1.34-.76-1.833-.2-.483-.4-.417-.556-.425-.144-.007-.31-.008-.475-.008a.913.913 0 0 0-.66.31c-.227.247-.866.845-.866 2.062 0 1.216.887 2.394.985 2.528.099.135 1.747 2.667 4.23 3.738.59.255 1.052.408 1.41.52.593.189 1.133.162 1.56.098.476-.07 1.46-.597 1.666-1.173.206-.577.206-1.072.144-1.173-.062-.1-.227-.165-.475-.29z" />
+                </svg>
+            </div>
+            <span class="whatsapp-text">Chat with Us</span>
+        </a>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>

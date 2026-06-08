@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = document.getElementById('message').value;
 
         // Build WhatsApp message
-        const whatsappNumber = '917013822659'; // India country code + number
+        const whatsappNumber = '919030424008'; // India country code + number
         const text = `🦷 *New Appointment Request*\n\n` +
             `👤 *Name:* ${name}\n` +
             `📧 *Email:* ${email}\n` +
@@ -183,4 +183,87 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // ---- Before / After Comparison Sliders ----
+    const sliders = document.querySelectorAll('[data-slider]');
+    
+    sliders.forEach(slider => {
+        const handle = slider.querySelector('[data-handle]');
+        const afterWrapper = slider.querySelector('[data-after-wrapper]');
+        let isDragging = false;
+
+        function setSliderPosition(xPercent) {
+            // Constrain between 0% and 100%
+            const percent = Math.max(0, Math.min(100, xPercent));
+            
+            // Update width of overlay and position of handle
+            afterWrapper.style.width = `${percent}%`;
+            handle.style.left = `${percent}%`;
+            
+            // Update accessibility aria value
+            handle.setAttribute('aria-valuenow', Math.round(percent));
+        }
+
+        function handleMove(clientX) {
+            const rect = slider.getBoundingClientRect();
+            const xOffset = clientX - rect.left;
+            const xPercent = (xOffset / rect.width) * 100;
+            setSliderPosition(xPercent);
+        }
+
+        // Mouse interactions
+        slider.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            isDragging = true;
+            slider.classList.add('active');
+            handleMove(e.clientX);
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            handleMove(e.clientX);
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            slider.classList.remove('active');
+        });
+
+        // Touch interactions (Mobile & Tablets)
+        slider.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            slider.classList.add('active');
+            handleMove(e.touches[0].clientX);
+        }, { passive: true });
+
+        window.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            handleMove(e.touches[0].clientX);
+        }, { passive: true });
+
+        window.addEventListener('touchend', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            slider.classList.remove('active');
+        });
+
+        // Keyboard accessibility (Arrow keys, Home, End)
+        handle.addEventListener('keydown', (e) => {
+            const currentVal = parseFloat(handle.getAttribute('aria-valuenow')) || 50;
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                setSliderPosition(currentVal - 5);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                setSliderPosition(currentVal + 5);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                setSliderPosition(0);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                setSliderPosition(100);
+            }
+        });
+    });
 });
