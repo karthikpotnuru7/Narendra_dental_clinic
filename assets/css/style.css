@@ -1844,13 +1844,21 @@ ul {
         height: 440px;
     }
 
+    .hero {
+        align-items: center;
+        padding-top: 110px;
+        padding-bottom: 50px;
+    }
+
     .hero h1 {
         font-size: 2.8rem;
+        margin-bottom: 24px;
     }
 
     .hero-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 32px;
+        padding-bottom: 0;
     }
 
     .hero-right {
@@ -2026,18 +2034,33 @@ ul {
 
     .hero {
         min-height: 100svh;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
+    .hero-tag {
+        margin-bottom: 12px;
     }
 
     .hero h1 {
         font-size: 2.2rem;
+        margin-bottom: 20px;
     }
 
     .hero-content {
-        padding-bottom: 60px;
+        gap: 24px;
+        padding-bottom: 0;
     }
 
     .hero-stat {
         max-width: 100%;
+        padding: 24px;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+        margin-bottom: 8px;
     }
 
     .stats-grid {
@@ -2113,13 +2136,24 @@ ul {
         gap: 12px;
     }
 
+    .hero {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+
     .hero h1 {
         font-size: 1.8rem;
+        margin-bottom: 16px;
     }
 
     .hero-actions {
         flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
+    }
+
+    .hero-stat {
+        padding: 20px;
     }
 
     .about-image img,
